@@ -1,0 +1,24 @@
+model:
+  train_arch_parameters: True
+grouping: alpha  # operation tree grouping strategy. alpha (default), [[2, 3], [1, 4]] 
+
+group_id: 0
+
+metric: val_acc  # or [val_acc, train_loss]
+
+warmup_epochs: 80  #original is 40
+warmup_lr: 0.025
+warmup_lr_min: 0.001
+warmup_batch_size: 150
+warmup_mode: joint
+
+train_lr: 0.025
+train_lr_min: 0.
+train_epochs: 20 # the total number of epochs to train if with full exploitation.
+train_batch_size: 150 
+topk: 3 # re-examize the topk subnets to reduce variance.
+
+re_init: False
+test_batch_size: 16384
+
+use_api: True

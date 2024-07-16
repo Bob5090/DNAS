@@ -1,0 +1,20 @@
+data:
+  dataset: cifar10 # warm up dataset, choose from cifar10, cifar100, ImageNet16-120
+  data_path: ./data
+enable_valid: True 
+
+rand_seed: -1 # if negative, using a random seed
+workers: 6
+
+# api
+use_api: True
+eval_candidate_num: 100
+
+# log
+load_path: null
+log_dir: ./output/search/
+print_freq: 100
+
+wandb:
+  use_wandb: True 
+  project: DNAS
